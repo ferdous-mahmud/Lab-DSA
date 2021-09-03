@@ -1,0 +1,18 @@
+# Stack is a collection of items into which items can be inserted or deleted at one end.
+
+# LIFO (Last In First Out)
+# Operations on stack:
+    1.Push - puts an item onto t he stack
+    2.Pop - removes an item form a stack
+    3.Empty - checks wherther the stack is emoty or not
+    4.Peek - returns the top element of the stack without changing the stack
+
+
+# Stack ADT(Abstract Data Type):
+
++inintializeStack(): void
++isEmptyStack(): boolean
++isFullStack(): boolean
++push(Type): void
++top(): Type
++pop(): void

@@ -1,0 +1,21 @@
+# A Queue is a linear structure which follows FIFO in which the operations are performed.
+
+# FIFO (First In First Out)
+
+# Needy Variables:
+	1.capacity - capacity of total list / array
+	2.totalItem - currently have total item on list/array
+	3.front - keep track of front item 
+	4.rear - keep track of last item
+
+# Operations on queue:
+	1.enqueue() - add item on queue 
+	2.dequeue() - remove item from queue and return it
+	3.isEmpty() - check queue empty or not
+	4.isFull() - check queue full or not
+
+
+# Circular array on stack:
+	for,
+		 enqueue -> rear = (rear + 1) % capacity
+		 dequeue -> front = (front + 1) % capacity
