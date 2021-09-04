@@ -8,7 +8,12 @@ public class Employee{
   private String address;
   private int age;
 
-  // constructor 
+  
+  // defautl constructor
+  public Employee(){
+    //
+  }
+  // constructor overloading
   public Employee(String name, int id, String address, int age){
     this.name = name;
     this.id = id;
