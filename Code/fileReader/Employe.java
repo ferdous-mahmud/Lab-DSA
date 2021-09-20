@@ -1,19 +1,15 @@
-package fileReader;
-
-import java.util.*;
-
-public class Employee{
+public class Employe{
   private String name;
   private int id;
   private String address;
-  private int age;
+  private int salary;
 
 
-  public Employee(String name, int id, String address, int age){
+  public Employe(String name, int id, String address, int salary){
     this.name = name;
     this.id = id;
     this.address = address;
-    this.age = age;
+    this.salary = salary;
   }
 
   public  void setName(String name){
@@ -40,13 +36,11 @@ public class Employee{
     return address;
   }
 
-  public void setAge(int age){
-    this.age = age;
+  public void setSalary(int salary){
+    this.salary = salary;
   }
 
-  public int getAge(){
-    return age;
+  public int getSalary(){
+    return salary;
   }
-
-  
 }
