@@ -22,6 +22,8 @@ public class Main {
         String address = input.nextLine();
         int age = input.nextInt();
         System.out.println(data);
+
+        employe[index] = new Employe(name, id, address, age);
       }
       input.close();
     // Error
