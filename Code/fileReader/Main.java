@@ -1,29 +1,27 @@
-package fileReader;
-
 import java.io.File;
-import java.io.FileNotFoundException;  //handle errors
-import java.util.Scanner; 
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Main {
-  public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-    int companySize = 6;
+    int companySize = 5;
     int index = 0;
-    Employee employe[] = new Employee[companySize];
+    Employe employe[] = new Employe[companySize];
 
 
     try {
-      File myObj = new File("input.txt");
+      File myObj = new File("src/input.txt");
       Scanner input = new Scanner(myObj);
 
       while (input.hasNextLine() && companySize > index) {
-        String name = input.nextLine();
-        int id = input.nextInt();
-        String address = input.nextLine();
-        int age = input.nextInt();
-        System.out.println(data);
+        String name = input.next();
+        String id = input.next();
+        String address = input.next();
+        String salary = input.next();
 
-        employe[index] = new Employe(name, id, address, age);
+        employe[index] = new Employe(name, Integer.valueOf(id), address, Integer.valueOf(salary));
+        index ++;
       }
       input.close();
     // Error
@@ -32,17 +30,15 @@ public class Main {
       exeption.printStackTrace();
     }
 
-    int age = 1;
-    int older = 0;
+    int salary = 1;
+    int higher = 0;
 
     for(int i = 0; i < companySize; i++){
-     if(employe[i].getAge() > age){
-       age = employe[i].getAge()
-       older = i;
+     if(employe[i].getSalary() > salary){
+       salary = employe[i].getSalary();
+       higher = i;
      }
     }
-
-    System.out.println("Older employe: "+ employe[older].getName()+" Age: "+employe[0].getAge());
- 
-  }
+    System.out.println("High paid employe: "+ employe[higher].getName()+" Salary: "+employe[higher].getSalary());
+    }
 }
