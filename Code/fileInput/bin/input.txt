@@ -2,7 +2,7 @@ Ferdous
 01
 Jashore
 23000
-Akash
+Jamal
 02
 Khulna
 22000
@@ -10,7 +10,7 @@ Rahim
 03
 Dhaka
 24000
-Jamal
+Akash
 04
 Dhaka
 50000
