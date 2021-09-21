@@ -45,8 +45,8 @@ public class App {
        lower = i;
      }
     }
-    System.out.println("High paid employe: "+ employe[higher].getName()+"\nSalary: "+employe[higher].getSalary());
-    System.out.println("Low paid employe: "+ employe[lower].getName()+"\nSalary: "+employe[lower].getSalary());
+    System.out.println("\nHigh paid employe: "+ employe[higher].getName()+"\nSalary: "+employe[higher].getSalary());
+    System.out.println("\nLow paid employe: "+ employe[lower].getName()+"\nSalary: "+employe[lower].getSalary());
     }
 }
 
