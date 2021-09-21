@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Main {
+public class App {
     public static void main(String[] args) throws Exception {
 
     int companySize = 5;
@@ -42,3 +42,7 @@ public class Main {
     System.out.println("High paid employe: "+ employe[higher].getName()+" Salary: "+employe[higher].getSalary());
     }
 }
+
+
+ 
+
