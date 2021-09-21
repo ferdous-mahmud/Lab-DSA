@@ -30,16 +30,23 @@ public class App {
       exeption.printStackTrace();
     }
 
-    int salary = 1;
+    int higherSalary = employe[0].getSalary();
+    int lowerSalary = employe[0].getSalary();
     int higher = 0;
+    int lower = 0;
 
     for(int i = 0; i < companySize; i++){
      if(employe[i].getSalary() > salary){
-       salary = employe[i].getSalary();
+       higherSalary = employe[i].getSalary();
        higher = i;
+     }
+     if(higherSalary < lower){
+       lowerSalary = employe[i].getSalary();
+       lower = i;
      }
     }
     System.out.println("High paid employe: "+ employe[higher].getName()+" Salary: "+employe[higher].getSalary());
+    System.out.println("Low paid employe: "+ employe[lower].getName()+" Salary: "+employe[lower].getSalary());
     }
 }
 
