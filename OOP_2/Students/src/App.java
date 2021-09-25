@@ -46,6 +46,7 @@ public class App {
         }
     }
 
+    System.out.println();
     System.out.println("Higher CGPA: "+String.format("%.2f",student[higher].calculateCGPA())+"  Name: "+student[higher].getName());
     System.out.println("Lower CGPA:  "+String.format("%.2f",student[lower].calculateCGPA())+"  Name: "+student[lower].getName());
 
