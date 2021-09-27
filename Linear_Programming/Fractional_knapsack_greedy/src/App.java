@@ -28,11 +28,15 @@ public class App{
 
       KnapsackCalculator knapsackCal = new KnapsackCalculator(num, profit, weight, ratio, capacity);
 
-      System.out.println(knapsackCal.getMaxProfit());
+      System.out.println("Maximum Profit: "+knapsackCal.getMaxProfit());
       float[] givenItem = knapsackCal.getGivenItem();
 
       for(i = 0; i < num; i ++){
-         System.out.println(i+1+"th item taken "+(int)givenItem[i]+" times");
+         if(givenItem[i] > 0){
+            System.out.print(i+1+"th item taken ");
+            System.out.printf("%.2f", givenItem[i]);
+            System.out.print(" times \n");
+         }
       }
 
       input.close();
