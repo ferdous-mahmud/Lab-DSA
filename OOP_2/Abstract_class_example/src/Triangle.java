@@ -1,6 +1,6 @@
 public class Triangle extends Shape {
     @Override
-    void draw() {
-        System.out.println("Drawing a triangle... ∆ Done!");
+    double area(double h, double w) {
+        return (0.5 * w) * h;
     }
 }

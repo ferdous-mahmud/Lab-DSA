@@ -12,8 +12,8 @@ public class App {
         Triangle triangle = new Triangle();
         Ractangle ractangle = new Ractangle();
 
-        circle.draw();
-        triangle.draw();
-        ractangle.draw();
+        System.out.println("Area of circle: "+circle.area(10, 5));
+        System.out.println("Area of triangle: "+triangle.area(10, 20));
+        System.out.println("Area of ractangle: "+ractangle.area(10, 20));
     }
 }
