@@ -4,29 +4,34 @@
 //  step 3: if f(c) = 0 .  or next step ...
 //  step 4: if f(c) * f(b) < 0 then a = c or b = c
 //  step 5: repeat until f(c) = 0
+//  Relative error er formula holo-( current solution-previous solution)/current solution sathe 100%
 
 class App {
     public static void main(String[] args) {
       double lower = 0, uper = 2, mid = 0, trueError = 0.1;
       
-      double estimatedError = uper - lower;
+      //double estimatedError = uper - lower;
+      double relativeError = ((uper - lower) / uper) * 100;
       int count = 0;
   
-      while (Math.abs(estimatedError) > trueError && count < 20 && f(mid) != 0) {
+      while (Math.abs(relativeError) > trueError && count < 20 && f(mid) != 0) {
         // False position
         //mid = (lower * f(uper) - uper * f(lower)) / (f(uper) - f(lower));
         mid = (lower + uper) / 2;
         if (f(mid) * f(uper) < 0) {
           lower = mid;
-          estimatedError = uper - lower;
+          //estimatedError = uper - lower;
+          relativeError = ((uper - lower) / uper) * 100;
         } else {
           uper = mid;
-          estimatedError = uper - lower;
+          //estimatedError = uper - lower;
+          relativeError = ((uper - lower) / uper) * 100;
         }
         count++;
       }
       System.out.println("Root: " + mid);
-      System.out.println("Estimated Error: " + estimatedError);
+      //System.out.println("Estimated Error: " + estimatedError);
+      System.out.println("Relative Error: " + relativeError);
       System.out.println("Iteration Number: " + count);
     }
   
