@@ -1,0 +1,4 @@
+Maximum Profit: 240.0
+1th item taken 1.0 times 
+2th item taken 1.0 times 
+3th item taken 0.6666667 times 

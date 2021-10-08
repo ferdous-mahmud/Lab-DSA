@@ -1,4 +1,4 @@
-public class KnapsackCalculator {
+public class FracKnapCalculator {
     private int num;
     private float profit[];
     private float weight[];
@@ -7,10 +7,11 @@ public class KnapsackCalculator {
     private float temp;
     private float maxProfit;
     
+    // Array for keep track of givenItems
     float givenItem[];
 
 
-    public KnapsackCalculator(int num, float profit[], float weight[], float ratio[], int capacity){
+    public FracKnapCalculator(int num, float profit[], float weight[], float ratio[], int capacity){
         this.num = num;
         this.profit = profit;
         this.weight = weight;
@@ -20,7 +21,7 @@ public class KnapsackCalculator {
 
     public float getMaxProfit(){
 
-        // Sort item and reasign
+        // Sort item by using selection sort and reasign
         for (i = 0; i < num; i++) {
             for (j = i + 1; j < num; j++) {
                 if (ratio[i] < ratio[j]) {
@@ -41,13 +42,16 @@ public class KnapsackCalculator {
 
         float givenItem[] = new float[num];
 
-        for (i = 0; i < num; i++)
+        // Put zero on each positon
+        for (i = 0; i < num; i++){
             givenItem[i] = 0;
-
+        }
+    
         for (i = 0; i < num; i++){
             if(weight[i] > capacity)
                 break;
             else{
+                // When item taken make zero to one
                 givenItem[i] = 1;
                 maxProfit += profit[i];
                 capacity -= weight[i];
